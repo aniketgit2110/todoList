@@ -4,14 +4,14 @@ import java.util.List;
 import java.util.Scanner;
 
 class Task {
-    private String description;
+    private String desc;
 
     public Task(String description) {
-        this.description = description;
+        this.desc = description;
     }
 
-    public String getDescription() {
-        return description;
+    public String getDesc() {
+        return desc;
     }
 }
 
@@ -33,7 +33,7 @@ public class TodoList {
     public void listTasks() {
         System.out.println("Tasks:");
         for (int i = 0; i < tasks.size(); i++) {
-            System.out.println((i + 1) + ". " + tasks.get(i).getDescription());
+            System.out.println((i + 1) + ". " + tasks.get(i).getDesc());
         }
     }
 
@@ -62,7 +62,7 @@ public class TodoList {
     private void saveTasksToFile() {
         try (PrintWriter writer = new PrintWriter(FILENAME)) {
             for (Task task : tasks) {
-                writer.println(task.getDescription());
+                writer.println(task.getDesc());
             }
         } catch (FileNotFoundException e) {
             System.out.println("Error saving tasks to file.");

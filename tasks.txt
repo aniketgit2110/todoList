@@ -1,2 +1,3 @@
 study for 2 hrs
-cricket 
+SE assignment
+se git hub lab experiment writeup
